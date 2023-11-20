@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Sembako</title>
+    <style>
+        body {
+          background-image: url('rt.jpg');
+          background-size: cover;
+          background-color: #f2f2f2;
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+    
+      
+      </style>
+    <link rel="stylesheet" href="toko.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>TOKO HJ.RIO</h1>
+        </div>
+    </header>
+
+    <section id="products">
+        <div class="container">
+            <!-- Daftar produk akan ditampilkan di sini -->
+            <div class="product">
+                <h3>Beras</h3>
+                <p class="price">Rp. 15,000</p>
+                <button onclick="addToCart(1)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product">
+                <h3>Minyak Goreng</h3>
+                <p class="price">Rp. 20,000</p>
+                <button onclick="addToCart(2)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product">
+
+                <h3>Gula</h3>
+                <p class="price">Rp. 12,000</p>
+                <button onclick="addToCart(3)">Tambah ke Keranjang</button>
+            </div>
+            <!-- Tambahkan produk lainnya sesuai kebutuhan -->
+        </div>
+    </section>
+
+    <section id="cart">
+        <div class="container">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items">
+                <!-- Item keranjang akan ditampilkan di sini -->
+            </ul>
+            <p>Total: <span id="total">Rp. 0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+        <div class="crud-form">
+            <h2>Tambah Produk Grosir</h2>
+            <form id="crud-form">
+              <input type="text" id="nama" placeholder="Nama Produk" required>
+              <input type="text" id="produk" placeholder="Harga" required>
+              <button type="button" onclick="tambahData()">Tambah</button>
+            </form>
+          </div>
+          
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="data-body">
+              <!-- Data akan ditampilkan di sini -->
+          </table>
+    </section>
+
+    <script src="toko.js"></script>
+    
+</body>
+</html>
